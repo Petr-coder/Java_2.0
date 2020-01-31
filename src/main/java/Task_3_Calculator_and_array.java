@@ -44,15 +44,18 @@ public class Task_3_Calculator_and_array {
             }
 
 
-        public static double getOperation () {
+        public static char getOperation () {
             Scanner scaner2 = new Scanner(System.in);
             String action = scaner2.nextLine();
 
             System.out.println("Введите требуемую операцию:");
             System.out.println("\"+\" - сложение,  \"-\" - вычитание");
             System.out.println("\"*\" - умножение, \"/\" - деление");
+        }
 
 
+
+        public static double calculator () {
         if (action.equals("+")){
             double result = value1 + value2;
             return result;}
@@ -64,7 +67,7 @@ public class Task_3_Calculator_and_array {
         else if (action.equals("*")){
             double result = value1 * value2;
             return result;}
-        }
+
         else if (action.equals("/")){
             double result = value1 / value2;
             return result;}
