@@ -12,6 +12,8 @@ import java.util.Scanner;
 public class Task_3_Calculator_and_array {
 
         public static void main(String[] args) throws IOException {
+            double value1;
+            double value2;
             System.out.println("Введите \"1\" чтобы запустить выполнение калькулятора");
             System.out.println("Введите \"2\" чтобы осуществить поиск максимального слова в массиве");
 
@@ -29,43 +31,45 @@ public class Task_3_Calculator_and_array {
 
 
 
+
         public static double getNumber () {
-            System.out.println("Введите число");
-            Scanner scaner1 = new Scanner(System.in);
-            if (scaner1.hasNextDouble()) {
-                return scaner1.nextDouble();
-            } else {
-                System.out.println("Ошибка при вводе. Повторите ввод");
-                return getNumber();
+                System.out.println("Введите число");
+                Scanner scaner1 = new Scanner(System.in);
+                if (scaner1.hasNextDouble()) {
+                    return scaner1.nextDouble();
+                } else {
+                    System.out.println("Ошибка при вводе. Повторите ввод");
+                    return getNumber();
+                }
             }
-        }
 
-        public static String getOperation () {
-        Scanner scaner2 = new Scanner(System.in);
-        String action = scaner2.nextLine();
 
-        System.out.println("Введите требуемую операцию:");
-        System.out.println("\"+\" - сложение,  \"-\" - вычитание");
-        System.out.println("\"*\" - умножение, \"/\" - деление");
+        public static double getOperation () {
+            Scanner scaner2 = new Scanner(System.in);
+            String action = scaner2.nextLine();
+
+            System.out.println("Введите требуемую операцию:");
+            System.out.println("\"+\" - сложение,  \"-\" - вычитание");
+            System.out.println("\"*\" - умножение, \"/\" - деление");
 
 
         if (action.equals("+")){
             double result = value1 + value2;
-            System.out.printf("Сумма чисел = " + "%.4f", result);}
+            return result;}
 
         else if (action.equals("-")){
             double result = value1 - value2;
-            System.out.printf("Разница чисел = " + "%.4f", result);}
+            return result;}
 
         else if (action.equals("*")){
             double result = value1 * value2;
-            System.out.printf("Результат умножения чисел = " + "%.4f", result);
+            return result;}
         }
         else if (action.equals("/")){
             double result = value1 / value2;
-            System.out.printf("Результат деления чисел = " + "%.4f", result);}
+            return result;}
         }
-        
+
 
     }
 }
