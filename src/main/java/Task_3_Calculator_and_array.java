@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class Task_Calculator_and_array
+public class Task_3_Calculator_and_array
 {
 
     public static void main(String[] args) throws IOException {
@@ -32,32 +32,26 @@ public class Task_Calculator_and_array
 
 
         else if (action.equals("2")){
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Определите размер массива");
-            // объявляем массив
-            int a = Integer.parseInt(reader.readLine());
-            String[] array = new String[a];
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                        System.out.println("Определите размер массива");
+                        // объявляем массив
+                        int a = Integer.parseInt(reader.readLine());
+                        String[] array = new String[a];
 
+                        Scanner sc = new Scanner(System.in);
+                        System.out.println("Введите слова одной строкой через пробел");
+                        String input = sc.nextLine();
 
-            Scanner sc = new Scanner(System.in);
-            //Вводим предложение в консоль
-            System.out.println("Введите слова одной строкой через пробел");
-            String input = sc.nextLine();
-            //Начальное количество слов равно 0
+                        array = input.split(" ");
+                        String maxLen = array[0];
 
-            String str = "find the most max length in string"; // это исходная строка
-            array = str.split(" "); // тут делим ее на отдельные слова, по пробелу
-            String maxLen = array[0]; // Здесь предполагаем что первый элемент в массиве самый короткий
+                         for (String e : array) {
+                            if (e.length() > maxLen.length()) {
+                                maxLen = e;
+                            }
+                        }
 
-// Тут последовательно сравниваем длину элементов массива, и если есть короче чем в переменной minLen, заносим ее туда
-
-            for (String e : array) {
-                if (e.length() > maxLen.length()) {
-                    maxLen = e;
-                }
-            }
-
-            System.out.print(maxLen); // тут вывод на экран
+                        System.out.print(maxLen);
         }
 
         else {
@@ -80,17 +74,19 @@ public class Task_Calculator_and_array
     }
 
 
-
     public static char getOperation() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Выберите номер операции:\n1 - прибавить\n2 - отнять\n3 - умножить\n4 - разделить");
         int operationNumber = 0;
         if(sc.hasNextInt()) {
             operationNumber = sc.nextInt();
-        } else {
+        }
+
+        else {
             System.out.println("Вы ввели не число! Повторите ввод!");
             return getOperation();
         }
+
         switch (operationNumber) {
             case 1:
                 return '+';
@@ -106,22 +102,40 @@ public class Task_Calculator_and_array
         }
     }
 
-    public static double calculator () {
-        if (action.equals("+")){
-            double result = value1 + value2;
-            return result;}
+    public static double add(double num1, double num2) {
+        return num1+num2;
+    }
 
-        else if (action.equals("-")){
-            double result = value1 - value2;
-            return result;}
+    public static double sub(double num1, double num2) {
+        return num1-num2;
+    }
 
-        else if (action.equals("*")){
-            double result = value1 * value2;
-            return result;}
+    public static double mul(double num1, double num2) {
+        return num1*num2;
+    }
 
-        else if (action.equals("/")){
-            double result = value1 / value2;
-            return result;}
+    public static double div(double num1, double num2) {
+        if(num2 != 0.0) {
+            return num1/num2;
+        } else {
+            System.out.println("На 0 делить нельзя!");
+            return Double.NaN;
+        }
+    }
+
+    public static double calc(double num1, double num2, char operation) {
+        switch (operation) {
+            case '+':
+                return add(num1, num2);
+            case '-':
+                return sub(num1, num2);
+            case '*':
+                return mul(num1, num2);
+            case '/':
+                return div(num1, num2);
+            default:
+                return Double.NaN;
+        }
     }
 
 
