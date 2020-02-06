@@ -9,21 +9,32 @@ import java.util.Scanner;
 public class Task_3_1_Array_random_numbers {
 
     public static void main(String[] args) {
-        int a = (int) (Math.random()*21 - 10);
-        int b = (int) (Math.random()*21 - 10);
-        int c = (int) (Math.random()*21 - 10);
-        int d = (int) (Math.random()*21 - 10);
-        int e = (int) (Math.random()*21 - 10);
-        int f = (int) (Math.random()*21 - 10);
+    int arrayRandom [] = new int[20];
 
-    System.out.println(a);
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(d);
-        System.out.println(e);
-        System.out.println(f);
+        for (int i = 0; i < arrayRandom.length; i++){
+            arrayRandom [i] = (int) (Math.random()*21 - 10);
+            System.out.print(arrayRandom[i] + " ");
+        }
 
+
+
+        int maxValue = arrayRandom[0];
+        int minValue = arrayRandom[0];
+
+        for (int value : arrayRandom) {
+
+            if (value > maxValue) {
+                maxValue = value;
+            }
+
+            if (value < minValue) {
+                minValue = value;
+            }
+
+        }
+
+
+        System.out.println("maxValue" + maxValue + ";" +" " + "minValue"+ minValue);
     }
 
 }
