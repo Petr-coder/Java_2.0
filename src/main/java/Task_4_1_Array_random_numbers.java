@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /** !!!!!!!!!!! Перенести все в методы !!!!!!!!!!!*/
 
-public class Task_3_1_Array_random_numbers {
+public class Task_4_1_Array_random_numbers {
 
     public static void main(String[] args) {
     int arrayRandom [] = new int[20];

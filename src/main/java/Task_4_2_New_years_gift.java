@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 
 
-public class  Task_3_2_New_years_gift {
+public class  Task_4_2_New_years_gift {
 
 
     public static void main(String[] args) {
