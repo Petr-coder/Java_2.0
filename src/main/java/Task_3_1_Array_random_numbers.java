@@ -12,6 +12,7 @@ public class Task_3_1_Array_random_numbers {
     int arrayRandom [] = new int[20];
 
         //создаем массив и выводим на экран
+        System.out.println("Выводим массив на экран:");
         for (int i = 0; i < arrayRandom.length; i++){
             arrayRandom [i] = (int) (Math.random()*21 - 10);
             System.out.print(arrayRandom[i] + "  ");
@@ -19,6 +20,7 @@ public class Task_3_1_Array_random_numbers {
 
 
         //ищем миниммальное и максимальное значения. хатем печатаем их
+        System.out.println("\n" + "\n" + "Максимальный отрицательный и минимальный положительный элементы массива");
         int maxValue = arrayRandom[0];
         int minValue = arrayRandom[0];
 
@@ -34,7 +36,7 @@ public class Task_3_1_Array_random_numbers {
 
         }
 
-        System.out.println("\n" + "maxValue" + " " + maxValue + ";" + " " + "minValue" + minValue);
+        System.out.println("maxValue" + " " + maxValue + ";" + " " + "minValue" + minValue);
 
 
 
@@ -49,7 +51,8 @@ public class Task_3_1_Array_random_numbers {
             }
         }
 
-        //Находим индекс минимального значения
+        //Находим индекс минимального значения и выводим на экран
+        System.out.println("\n" + "Индексы максимального отрицательного и минимального положительного элементов массива");
         int min = arrayRandom[0];
         int indexForMin = 0;
         for (int i = 0; i < arrayRandom.length; i++) {
@@ -60,9 +63,9 @@ public class Task_3_1_Array_random_numbers {
             }
         }
 
-
-
         System.out.println("indexForMin" + " " + indexForMin + ";" + " " + "indexForMax" + " " + indexForMax);
+
+
 
         //меняем индексы местами
         int a = 0;
@@ -70,7 +73,11 @@ public class Task_3_1_Array_random_numbers {
         arrayRandom [indexForMin] = arrayRandom [indexForMax];
         arrayRandom [indexForMax] = a;
 
-        //печатаем массив с индкесами поменяными местами
+
+
+
+        //печатаем массив с индкесами, поменяными местами
+        System.out.println("\n" + "После перемены местами индексов массив выглядит так");
         for (int i = 0; i < arrayRandom.length; i++){
 
             System.out.print(arrayRandom[i] + "  ");
