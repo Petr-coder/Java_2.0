@@ -5,6 +5,10 @@ public abstract class Sweets {
     private double weight;
     private double price;
 
+    public Sweets(String name, double weight, double price) {
+
+    }
+
     public String getName() {
         return name;
     }
