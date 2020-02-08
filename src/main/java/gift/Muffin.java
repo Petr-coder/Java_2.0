@@ -10,9 +10,18 @@ public class Muffin extends Sweets{
     this.size = size;
     }
 
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
     @Override
     public String toString(){
-        return "Muffin [" + super.toString() + ", size =" + size + "]";
+
+        return "Muffin [" + super.toString() + ", size = " + size + "]";
     }
 
 

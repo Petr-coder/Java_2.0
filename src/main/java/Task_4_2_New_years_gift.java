@@ -1,3 +1,8 @@
+import gift.Biscuit;
+import gift.Macaroon;
+import gift.Muffin;
+import gift.Sweets;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,10 +15,25 @@ import java.util.Scanner;
 
 
 public class  Task_4_2_New_years_gift {
-
-
     public static void main(String[] args) {
 
+        double totalWeight = 0;
+        double amount  = 0;
+
+        Biscuit biscuit1 = new Biscuit ("Юбилейное", 1.5, 50, "Очень вкусный");
+        Macaroon macaroon1 = new Macaroon("Макаронина", 10, 2500, "Розовый");
+        Muffin muffin1 = new Muffin("Просто маффин", 1, 600, "Средних размеров");
+
+        Sweets [] gift = {biscuit1, macaroon1, muffin1};
+
+        for (Sweets someSweets : gift){
+            System.out.println(someSweets.toString());
+        }
+
+        totalWeight = biscuit1.getWeight() + macaroon1.getWeight() + muffin1.getWeight();
+        amount = biscuit1.getPrice() + macaroon1.getPrice() + muffin1.getPrice();
+        System.out.println("Общий вес подарка = [" + totalWeight + "] кг");
+        System.out.println("Общая стоимость подарка = [" + amount + "] руб.");
     }
 
 }
