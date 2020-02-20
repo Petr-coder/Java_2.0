@@ -44,16 +44,9 @@ public class Task_6_Collection {
         }
         System.out.println(statistics);
 
-
-        int temp, count;
-        for (int i = 0; i < words.size();)
-        {
-            temp = words.get(i);
-            count = 1;
-            while(++i < array.length && array[i] == temp)
-                ++count;
-            System.out.print(temp + "-" + count + " ");
-        }
+        //////////////////////////////////////////////////////////////////////////////////////////////////////
+        Integer max = Collections.max(statistics.values());
+        System.out.println(max);
 
 
 
