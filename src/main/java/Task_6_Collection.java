@@ -1,6 +1,11 @@
 import java.io.*;
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.Map;
+
+
 
 /**
  Есть входной файл с набором слов, написанных через пробел
@@ -9,7 +14,7 @@ import java.util.*;
  + Отсортировать в алфавитном порядке.
  + Посчитать сколько раз каждое слово встречается в файле.
  + Вывести статистику на консоль
- Найти слово с максимальным количеством повторений. Вывести на консоль это слово и сколько раз оно встречается в файле
+ +Найти слово с максимальным количеством повторений. Вывести на консоль это слово и сколько раз оно встречается в файле
  */
 
 
@@ -48,7 +53,15 @@ public class Task_6_Collection {
         Integer max = Collections.max(statistics.values());
         System.out.println(max);
 
-
+         String key= null;
+        Integer value= max;
+        for(Map.Entry entry: statistics.entrySet()){
+            if(value.equals(entry.getValue())){
+                key = (String) entry.getKey();
+                break; //breaking because its one to one map
+            }
+        }
+        System.out.println("Наиболее часто встречающееся слово: " + "\"" + key + "\"" + " в количестве: " + value + " раз(а)");
 
     }
 }
