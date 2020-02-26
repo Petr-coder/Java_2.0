@@ -1,6 +1,5 @@
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 
 /*
@@ -8,17 +7,5 @@ import java.util.ArrayList;
 */
 
 public class smth {
-    public static void main(String[] args) throws Exception {
-        ArrayList <String> array = new ArrayList<String>();
-        array.add("167");
-        array.add("-2");
-        array.add("16");
-        array.add("99");
-        array.add("26");
-        for (int i = 0; i < 5; i ++){
-            System.out.println(array.get(i));
-        }
 
-
-    }
 }
