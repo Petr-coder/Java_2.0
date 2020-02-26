@@ -5,8 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-/** Задание №5
- Реализовать калькулятор в стиле ООП. Архитектуру приложения продумать самостоятельно*/
+/** Задание №7
+ Добавить обработку исключений в задание с ООП калькуляторам (например, исключение может возникнуть при делении на ноль)
+ */
 public class Task_7_exceptions {
 
     public static void main(String[] args) throws Exception {
