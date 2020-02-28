@@ -58,7 +58,7 @@ public class Task_6_Collection {
         for(Map.Entry entry: statistics.entrySet()){
             if(value.equals(entry.getValue())){
                 key = (String) entry.getKey();
-                break; //breaking because its one to one map
+                break; 
             }
         }
         System.out.println("Наиболее часто встречающееся слово: " + "\"" + key + "\"" + " в количестве: " + value + " раз(а)");
